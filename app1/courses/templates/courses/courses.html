@@ -1,0 +1,165 @@
+{% extends 'main/base.html' %} 
+
+{% load static %} 
+
+{% block title %} {{'Курсы'}} {% endblock %} 
+
+{% block content %}
+<div class="container">
+  <section class="english-courses">
+    <div class="title">
+      <h1>Курсы английского языка онлайн под <span>ваши цели</span></h1>
+      <p>Разработаем индивидуальный план обучения, составим удобное расписание, поможем поставить цель и достичь ее</p>
+    </div>
+    <div class="filters">
+      <button class="filter active">Все</button>
+      <button class="filter">Для заграничных поездок</button>
+      <button class="filter">Для работы</button>
+      <button class="filter">Для учебы</button>
+      <button class="filter">Для себя</button>
+      <select class="levels">
+        <option value="all">Все уровни</option>
+        <option value="beginner">Начинающий</option>
+        <option value="intermediate">Средний</option>
+        <option value="advanced">Продвинутый</option>
+      </select>
+    </div>
+
+    <div class="courses">
+        <div class="course">
+          <img src="{% static 'main/img/icon4.png' %}" class="img" alt="Английский для IT">
+          <h3>Английский для разработчиков</h3>
+          <p>10 833 рублей в месяц</p>
+          <p>Погрузитесь в мир технической терминологии, научитесь объяснять сложные концепции и участвовать в код-ревью на английском.</p>
+        </div>
+        <div class="course">
+          <img src="{% static 'main/img/icon5.png' %}" class="img" alt="Бизнес английский">
+          <h3>Бизнес английский</h3>
+          <p>10 833 рублей в месяц</p>
+          <p>Развивайте навыки ведения переговоров, подготовки отчетов и презентаций в деловой среде.</p>
+        </div>
+        <div class="course">
+          <img src="{% static 'main/img/icon6.png' %}" class="img" alt="Английский для маркетинга">
+          <h3>Английский для маркетологов</h3>
+          <p>10 833 рублей в месяц</p>
+          <p>Научитесь создавать эффективные рекламные кампании, работать с аналитикой и выстраивать коммуникацию с клиентами.</p>
+        </div>
+      </div>
+      
+      <div class="courses">
+        <div class="course">
+          <img src="{% static 'main/img/icon7.png' %}" class="img" alt="Английский для путешествий">
+          <h3>Английский для путешествий</h3>
+          <p>8 500 рублей в месяц</p>
+          <p>Освойте полезные фразы для общения за границей, бронирования отелей и заказа еды в ресторанах.</p>
+        </div>
+        <div class="course">
+          <img src="{% static 'main/img/icon8.png' %}" class="img" alt="Английский для студентов">
+          <h3>Английский для учебы</h3>
+          <p>9 200 рублей в месяц</p>
+          <p>Готовьтесь к сдаче экзаменов, написанию научных работ и презентаций на английском языке.</p>
+        </div>
+        <div class="course">
+          <img src="{% static 'main/img/icon9.png' %}" class="img" alt="Английский для врачей">
+          <h3>Английский для врачей</h3>
+          <p>11 500 рублей в месяц</p>
+          <p>Изучите медицинскую терминологию, улучшите навыки общения с пациентами и коллегами за рубежом.</p>
+        </div>
+      </div>
+      
+      <div class="courses">
+        <div class="course">
+          <img src="{% static 'main/img/icon10.png' %}" class="img" alt="Английский для финансистов">
+          <h3>Английский для финансистов</h3>
+          <p>12 000 рублей в месяц</p>
+          <p>Научитесь анализировать отчеты, готовить презентации и вести переговоры с партнерами.</p>
+        </div>
+        <div class="course">
+          <img src="{% static 'main/img/icon11.png' %}" class="img" alt="Английский для инженеров">
+          <h3>Английский для инженеров</h3>
+          <p>10 500 рублей в месяц</p>
+          <p>Развивайте навыки общения в технических проектах и работы с международными командами.</p>
+        </div>
+        <div class="course">
+          <img src="{% static 'main/img/icon12.png' %}" class="img" alt="Английский для творческих профессий">
+          <h3>Английский для креативщиков</h3>
+          <p>9 800 рублей в месяц</p>
+          <p>Изучите лексику для дизайнеров, писателей и режиссеров, чтобы работать на международном рынке.</p>
+        </div>
+      </div>
+  </section>
+
+<section class = "rek1">
+  <div class="rek">
+    <div class="tabs">
+      <button class="tab1 active">Взрослым</button>
+      <button class="tab1">Детям и подросткам</button>
+    </div>
+    <div class="content">
+      <h1>Начните говорить по-английски свободно</h1>
+      <p>
+        Записывайтесь на бесплатную консультацию — там мы определим ваш уровень, разберемся, что вам до сих пор мешало выучить язык, поможем поставить цель, разработаем индивидуальную программу и оптимальный график занятий
+      </p>
+      <form class="form">
+        <input type="text" placeholder="Имя" required>
+        <input type="email" placeholder="your@email.com" required>
+        <input type="tel" placeholder="+7 (___) ___-__-__" required>
+        <label class="checkbox">
+          <input type="checkbox" required>
+          Соглашаюсь на обработку персональных данных в соответствии с условиями
+          <a href="#" target="_blank">пользовательского соглашения</a>
+        </label>
+        <button type="submit">Хочу на консультацию</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="unique-lessons">
+    <h2>Уроки с преподавателем — это хорошо, но хочется чего-то необычного?</h2>
+    <div class="options">
+      <div class="option-clubs">
+        <h3>Разговорные клубы</h3>
+        <p>Обсуждайте интересные темы на онлайн-встречах с учениками своего уровня. Преподаватели-ведущие вас поддержат и помогут преодолеть языковой барьер.</p>
+        <a href="#" class="details">Подробнее</a>
+      </div>
+      <div class="option-talks">
+        <h3>Talks</h3>
+        <p>15-минутные разговоры один на один с преподавателями со всего мира. Собеседник найдётся за пару минут, и вы сразу сможете начать разговор. Никакой подготовки не требуется.</p>
+        <a href="#" class="details">Подробнее</a>
+      </div>
+    <div class="option-talks-2">
+        <h3>Самостоятельное обучение Self-study</h3>
+        <p>Проходите в нашем приложении «Ситуации» — сценарии из реальной жизни, которые помогут использовать английский на практике.  </p>
+        <a href="#" class="details">Подробнее</a>
+      </div>
+      <div class="option-talks-3">
+        <h3>Talks</h3>
+        <p>15-минутные разговоры один на один с преподавателями со всего мира. Собеседник найдётся за пару минут, и вы сразу сможете начать разговор. Никакой подготовки не требуется.</p>
+        <a href="#" class="details">Подробнее</a>
+      </div>
+</section>
+
+<section class = "reklama">
+    <section class="app-promo">
+        <div class="app-content">
+          <h2>Скачайте приложение и учите английский в любой обстановке</h2>
+          <ul>
+            <li>⭐ Тренажёры и упражнения</li>
+            <li>⭐ Занятия с учителем</li>
+            <li>⭐ Доступ к домашним заданиям</li>
+          </ul>
+          <div class="app-buttons">
+            <a href="#"><img src="{% static 'main/img/GP.png' %}" alt="Скачать в Google Play" /></a>
+            <a href="#"><img src="{% static 'main/img/AP.png' %}" alt="Скачать в App Store" /></a>
+            <a href="#"><img src="{% static 'main/img/RU.png' %}" alt="Скачать в RuStore" /></a>
+          </div>
+        </div>
+        <div class="app-images">
+          <img src="{% static 'main/img/PH1.png' %}" alt="Скриншот приложения 1" />
+          <img src="{% static 'main/img/PH2.png' %}" alt="Скриншот приложения 2" />
+        </div>
+      </section>
+</section>
+</div>
+{% endblock %}

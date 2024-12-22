@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %} 
+
+{% load static %} 
+
+{% block title %} {{'Регистрация'}} {% endblock %} 
+
+{% block content %}
+<div class="container reg-container">
+    <h2>Зарегистрироваться</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="button" type="submit">Зарегистрироваться</button>
+    </form>
+</div>
+{% endblock %}

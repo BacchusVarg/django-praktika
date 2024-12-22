@@ -1,0 +1,275 @@
+{% extends 'main/base.html' %} 
+
+{% load static %} 
+
+{% block title %} {{'Главная страница'}} {% endblock %} 
+
+{% block content %}
+
+<section class="hero">
+  <h1>Учите английский с EnglishLVL на максимально выгодных условиях</h1>
+  <p>
+    Нескучное онлайн-обучение английскому языку на образовательной IT платформе
+    с помощью игр, последовательных курсов и интересных заданий в любое удобное
+    для вас время
+  </p>
+  <div class="buttons">
+    <a href="{% url "courses" %}" class="start">Начать заниматься</a>
+  </div>
+</section>
+
+<section class="features">
+  <h2>Начните изучать английский язык прямо сейчас!</h2>
+  <div class="features-grid">
+    <div class="feature-item">
+      <img
+        src="{% static 'main/img/lupa.png' %}"
+        alt="Определим"
+        class="icon"
+      />
+      <h3>Определим</h3>
+      <p>Ваш уровень и пробелы в знаниях</p>
+    </div>
+    <div class="feature-item">
+      <img
+        src="{% static 'main/img/raketa.png' %}"
+        alt="Составим"
+        class="icon"
+      />
+      <h3>Составим</h3>
+      <p>Индивидуальную программу обучения английскому языку</p>
+    </div>
+    <div class="feature-item">
+      <img
+        src="{% static 'main/img/peshka.png' %}"
+        alt="Поможем"
+        class="icon"
+      />
+      <h3>Поможем</h3>
+      <p>Выработать привычку и не бросить занятия через месяц</p>
+    </div>
+    <div class="feature-item">
+      <img src="{% static 'main/img/gora.png' %}" alt="Погрузим" class="icon" />
+      <h3>Погрузим</h3>
+      <p>В англоязычную среду</p>
+    </div>
+  </div>
+  <div class="features-button">
+    <a href="{% url "courses" %}" class="start">Начать заниматься</a>
+  </div>
+</section>
+
+<section class="lesson-section">
+  <div class="lesson-content">
+    <h2>Обучаем живому разговорному языку</h2>
+    <p>
+      Занимайтесь по уникальной методике Flipped Classroom, составленной
+      командой профессиональных методистов EnglishLVL
+    </p>
+    <h3>Занятие делится на две части:</h3>
+    <ol>
+      <li>
+        Выполняете домашнее задание из коротких упражнений на сайте EnglishLVL
+      </li>
+      <li>Практикуете разговорную речь на уроке с преподавателем 25 минут</li>
+    </ol>
+    <button class="apply-button">Оставить заявку</button>
+  </div>
+  <div class="lesson-image">
+    <img src="{% static 'main/img/woman.png' %}" alt="Живое общение" />
+  </div>
+</section>
+
+<section class="results-section">
+  <div class="results-content">
+    <h2>Что вас приведет к результату</h2>
+    <div class="benefits-list">
+      <div class="benefit">
+        <span class="check-icon">✔</span>
+        <p><strong>Бессрочный доступ</strong> ко всему EnglishLVL</p>
+      </div>
+      <div class="benefit">
+        <span class="check-icon">✔</span>
+        <p>
+          Занятия с преподавателем <strong>в подарок</strong>. Количество
+          занятий зависит от выбранного тарифа.
+        </p>
+      </div>
+      <div class="benefit">
+        <span class="check-icon">✔</span>
+        <p>
+          <strong>6 курсов</strong> от новичка до продвинутого по Методу Тичера
+        </p>
+      </div>
+      <div class="benefit">
+        <span class="check-icon">✔</span>
+        <p>
+          <strong>Личный план занятий</strong> для вашего уровня и интересов
+        </p>
+      </div>
+      <div class="benefit">
+        <span class="check-icon">✔</span>
+        <p>Диалоги для <strong>тренировки речи и произношения</strong></p>
+      </div>
+      <div class="benefit">
+        <span class="check-icon">✔</span>
+        <p>
+          <strong>Оксфордский тест</strong> на знание языка с выдачей
+          официального сертификата
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="form-section">
+    <h3>Получить программу и консультацию</h3>
+    <form class="consultation-form">
+      <input type="text" placeholder="Имя" required />
+      <input type="number" placeholder="Возраст" required />
+      <div class="phone-input">
+        <input type="tel" placeholder="Телефон" required />
+      </div>
+      <input type="email" placeholder="E-mail" required />
+      <button type="submit" class="submit-button">Оставить заявку</button>
+    </form>
+  </div>
+</section>
+
+<section class="level-section">
+  <h2>Кому подойдет?</h2>
+  <div class="level-tabs">
+    <button class="tab active">Новичок</button>
+    <button class="tab">Начинающий</button>
+    <button class="tab">Средний</button>
+    <button class="tab">Продвинутый</button>
+    <button class="tab">Для детей</button>
+  </div>
+  <div class="level-content">
+    <div class="description">
+      <h3>Уровень Beginner</h3>
+      <p>
+        Сможете рассказать о себе и поговорить на бытовые темы, где живете,
+        работаете, рассказать о хобби, будете чувствовать себя уверенно в другой
+        стране.
+      </p>
+      <button class="start-button">Начать заниматься</button>
+    </div>
+    <ul class="lesson-list">
+      <li>1. Как начать разговор на английском.</li>
+      <li>2. Изучаем английский алфавит и его особенности.</li>
+      <li>3. Строим диалоги при знакомстве.</li>
+      <li>4. To be or Not to be. Быть или не быть?</li>
+      <li>5. Я, ты, он, она. Считаем на английском.</li>
+      <li>6. О путешествиях, странах и национальностях.</li>
+      <li>7. Что это? Где это? О правильных вопросах и ответах.</li>
+      <li>
+        8. Смотри что у меня есть! Как правильно рассказать о своих вещах.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="features-section">
+  <div class="feature">
+    <div class="feature-image">
+      <img
+        src="{% static 'main/img/sertif.png' %}"
+        alt="Oxford Test Certificate"
+      />
+    </div>
+    <div class="feature-content">
+      <h3>Подтвердите свои знания сертификатом</h3>
+      <p>
+        Пройдя обучение на сайте для изучения английского языка - EnglishLVL, вы
+        сможете сдать настоящий адаптивный тест по английскому языку,
+        разработанный Оксфордским университетом.
+      </p>
+      <button class="feature-button">Оставить заявку</button>
+    </div>
+  </div>
+
+  <div class="feature">
+    <div class="feature-image">
+      <img
+        src="{% static 'main/img/woman2.png' %}"
+        alt="Available on all platforms"
+      />
+    </div>
+    <div class="feature-content">
+      <h3>Доступно на всех платформах</h3>
+      <p>
+        В отличие от языковой школы EnglishLVL — это сервис, доступный там, где
+        удобно вам! Занимайтесь английским на компьютере, планшете, смартфоне.
+      </p>
+      <div class="platform-icons">
+        <img src="{% static 'main/img/app.png' %}" alt="App Store" />
+        <img src="{% static 'main/img/google.png' %}" alt="Google Play" />
+        <img src="{% static 'main/img/hua.png' %}" alt="Huawei Store" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing-section">
+  <h2 class="pricing-title">Тарифы</h2>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <h3>Стартовый</h3>
+      <p>
+        Вас ждут бесплатные задания: десятки упражнений на лексику, грамматику,
+        произношение
+      </p>
+      <p class="price">бесплатно</p>
+      <button class="pricing-button">Попробовать</button>
+    </div>
+    <div class="pricing-card">
+      <h3>Личный план</h3>
+      <p>
+        Индивидуальная программа для обучения от 20 минут занятий в день, ничего
+        лишнего, сможете настроить всё под себя
+      </p>
+      <p class="price">от 160 ₽/мес</p>
+      <button class="pricing-button">Начать заниматься</button>
+    </div>
+    <div class="pricing-card">
+      <h3>Премиум</h3>
+      <p>
+        Максимальный доступ ко всем упражнениям и материалам на сайте,
+        занимайтесь сколько хотите
+      </p>
+      <p class="price">от 600 ₽/мес</p>
+      <button class="pricing-button">Начать заниматься</button>
+    </div>
+    <div class="pricing-card">
+      <h3>Master of English</h3>
+      <p>
+        Доступ к платформе НАВСЕГДА и уроки с персональным преподавателем. Для
+        тех, кто хочет достичь вершины мастерства в английском
+      </p>
+      <button class="pricing-button">Узнать подробнее</button>
+    </div>
+  </div>
+</section>
+
+<section class="email-section">
+  <div class="email-container">
+    <div class="email-text">
+      <h2>100 фраз, чтобы говорить как носитель языка</h2>
+      <p>Введите email, чтобы получить уникальную методичку</p>
+      <form class="email-form">
+        <input type="email" placeholder="Email" required />
+        <button type="submit">Получить набор фраз</button>
+      </form>
+      <div class="email-terms">
+        <input type="checkbox" id="accept-terms" checked />
+        <label for="accept-terms"
+          >Вводя свой email, вы принимаете данные <a href="#">условия</a></label
+        >
+      </div>
+    </div>
+    <div class="email-image">
+      <img src="{% static 'main/img/books.png' %}" alt="Book illustration" />
+    </div>
+  </div>
+</section>
+
+{% endblock %}

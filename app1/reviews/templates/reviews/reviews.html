@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %} 
+
+{% load static %} 
+
+{% block title %} {{'Отзывы'}} {% endblock %} 
+
+{% block content %}
+<div class="container reg-container">
+    <h1 class="reviews h1">Отзывы</h1>
+      {% if user.is_authenticated %}
+        <p class="reviews-p">Оставьте свой отзыв, это важно для нас!</p>
+        <form method="post" class="review-form" style="display: flex; flex-direction: column; align-items: flex-start;" required>
+          {% csrf_token %}
+          {{ form.as_p }}
+          <p class="gray">* - поля, обязательные для заполнения</p>
+          <button class="button marg" type="submit">Оставить отзыв</button>       
+        </form>
+      {% else %}
+          <p style="font-size: 20px; font-weight: 700;">Оставить отзыв могут только авторизованные пользователи</p>
+          <form action="{% url 'login' %}">
+            <button class="button marg" type="submit">Войти в аккаунт</button>
+          </form>
+      {% endif %}
+      {% for comment in comments %}
+            <div class="review-card">
+              <div class="username">
+                  <p class="name">{{ comment.name }}</p>
+                  <p style="font-size: 12px; color: #4F4F4F;">{{ comment.created_at }}</p>    
+              </div>
+              <hr style="color: #cccccc;">
+              <p>{{ comment.text }}</p>
+            </div>
+        {% empty %}
+            <p>Отзывов нет. Ваш будет первым!</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

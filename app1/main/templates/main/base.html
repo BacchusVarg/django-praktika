@@ -1,0 +1,76 @@
+{% load static%}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url "index" %}">
+                <img src="{% static 'main/img/logo.png' %}" alt="English Logo" class="logoimg"/>
+                EnglishLVL
+            </a>
+        </div>
+        <nav class="nav">
+          <a href="{% url "aboutus" %}">Об образовательной IT платформе</a>
+        </nav>
+        <div class="cta">
+          {% if user.is_authenticated %}
+            <p>Добро пожаловать, {{ user.username }}!</p>
+            <form action="{% url 'logout' %}" method="post">
+              {% csrf_token %}
+              <button class="login" type="submit">Выйти</button>
+            </form>
+          {% else %}
+            <a href="{% url 'login' %}" class="login">Вход</a>
+            <a href="{% url 'register' %}" class="register">Регистрация</a>
+          {% endif %}
+          
+        </div>
+      </header>
+        
+    {% block content %}
+    
+    {% endblock %}
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>О нас</h3>
+          <ul>
+            <li><a href="{% url "aboutus" %}">English LVL</a></li>
+            <li><a href="{% url "reviews" %}">Отзывы</a></li>
+            <li><a href="{% url "aboutus" %}">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Курсы</h3>
+          <ul>
+            <li><a href="{% url "courses" %}">Авторские курсы</a></li>
+            <li><a href="{% url "courses" %}">Метод Тичера</a></li>
+            <li><a href="{% url "courses" %}">Детский курс</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Игры</h3>
+          <ul>
+            <li><a href="#">Переводилка</a></li>
+            <li><a href="#">Кроссворды</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="#">Связаться с нами</a>
+          <a href="#">RU</a>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>
